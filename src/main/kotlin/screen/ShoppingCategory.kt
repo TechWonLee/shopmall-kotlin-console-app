@@ -2,8 +2,14 @@ package screen
 
 import extensions.getNotEmptyString
 
-class ShoppingCategory {
+class ShoppingCategory : Screen() {
     fun showCategories() {
+        /* 상품 카테고리표시
+            사용자 입력받기
+           사용자가 잘못된 값 입력 처리  */
+
+        //스택에 저장
+        ScreenStack.push(this)
 
         val categories = arrayOf("패션", "전자기기", "반려동물용품")
         for (category in categories) {

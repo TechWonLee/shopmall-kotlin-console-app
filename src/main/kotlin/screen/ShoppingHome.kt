@@ -3,7 +3,7 @@ package screen
 import LINE_DIVIDER
 import extensions.getNotEmptyString
 
-class ShoppingHome {
+class ShoppingHome : Screen() {
     fun start () {
 
         showWelcomeMessage()
@@ -15,6 +15,8 @@ class ShoppingHome {
         인사말 출력
      */
         fun showWelcomeMessage() {
+            //스택에 저장
+            ScreenStack.push(this)
             println("안녕하세요, ShopMall에 오신것을 환영합니다~!")
             println("쇼핑을 계속 하시려면 이름을 입력해 주세요: ")
 
