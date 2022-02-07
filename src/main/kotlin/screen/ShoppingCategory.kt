@@ -37,8 +37,8 @@ class ShoppingCategory : Screen() {
         } else {
             if(categories.contains(selectedCategory)) {
                 // 카테고리 상품 목록 보여주기
-                val shoppingProductList = ShoppingProductList()
-                shoppingProductList.showProducts(selectedCategory)
+                val shoppingProductList = ShoppingProductList(selectedCategory)
+                shoppingProductList.showProducts()
             }else{
                 //  (3) 카테고리 목록에 없는 경우 처리
                 showErrorMessage(selectedCategory)
